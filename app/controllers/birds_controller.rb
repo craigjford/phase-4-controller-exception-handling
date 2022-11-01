@@ -37,12 +37,8 @@ class BirdsController < ApplicationController
   # DELETE /birds/:id
   def destroy
     bird = find_bird
-    if bird
-      bird.destroy
-      head :no_content
-    else
-      render_not_found_response
-    end
+    bird.destroy
+    head :no_content
   end
 
   private
